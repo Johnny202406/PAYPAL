@@ -17,14 +17,28 @@
                                 </div>
                             </div>
             </li>
+
+           
+                <li>
+                   <form class="">   
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search" class="block w-full p-2 ps-10 text-sm text-gray-900 w-full  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." required />
+
+                     
+                    </div>
+                </form>
+                </li>
+            
             @for (item of sidebarItems1; track $index) {
 
                 <li>
-                   <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
-                      <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                         <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                         <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-                      </svg>
+                   <a href="#" class="flex items-center p-2 text-gray-300 rounded-lg hover:bg-gray-200 group hover:text-gray-400">
+                      <i class="pi {{item.icon}}"></i>
                       <span class="ms-3">{{item.label}}</span>
                    </a>
                 </li>
@@ -33,31 +47,26 @@
             @for (item of sidebarItems1; track $index) {
 
                 <li>
-                   <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
-                      <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                         <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                         <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-                      </svg>
-                      <span class="ms-3">{{item.label}}</span>
+                   <a  class="flex items-center p-2 text-gray-300 rounded-lg hover:bg-gray-400 group">
+                    <i class="pi {{item.icon}}"></i>
+                      <span class="ms-3 ">{{item.label}}</span>
                    </a>
                 </li>
             }
          <!-- Continúa eliminando las clases `dark:` de los demás elementos como se ha hecho aquí -->
       </ul>
-      <div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-50" role="alert">
-         <div class="flex items-center mb-3">
-            <span class="bg-orange-100 text-orange-800 text-sm font-semibold me-2 px-2.5 py-0.5 rounded-sm">Beta</span>
-            <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 inline-flex justify-center items-center w-6 h-6 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200" data-dismiss-target="#dropdown-cta" aria-label="Close">
-               <span class="sr-only">Close</span>
-               <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-               </svg>
-            </button>
-         </div>
-         <p class="mb-3 text-sm text-blue-800">
-            Preview the new Flowbite dashboard navigation! You can turn the new navigation off for a limited time in your profile.
-         </p>
-         <a class="text-sm text-blue-800 underline font-medium hover:text-blue-900" href="#">Turn new navigation off</a>
+      <div id="dropdown-cta" class="p-4 mt-6 rounded-lg bg-blue-500" role="alert">
+          <p class=" text-white text-xl font-medium " href="#">Become Pro Acces</p>
+          <p class="mb-3 text-sm text-white text-center">
+              Preview the new Flowbite dashboard navigation
+            </p>
+           
+         <button class="shadow-[0_3px_10px_rgb(0,0,0,0.2)] flex items-center justify-center gap-2 bg-white/30 w-full p-4 rounded-md text-white text-sm font-semibold ">
+            <i class="pi pi-star" style="font-size: 1rem;color:white"></i>
+            Upgrade Pro
+        </button>
+         
+         
       </div>
    </div>
 </aside>
@@ -98,7 +107,7 @@
         
         </nav>
     </header>
-    <div class="w-full px-4  pt-4">
+    <div class="w-full px-8  pt-4">
         <div class="flex justify-between">
 
             <div class="flex flex-col">
@@ -106,8 +115,8 @@
                 <h4 class="text-2xl font-bold ">Campaign</h4>
                 <span class="text-gray-400">See how much do you have</span>
             </div>
-                <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center bg-blue-700  mb-2">
-                
+                <button type="button" class="flex items-center gap-2 text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center  bg-blue-700  mb-2">
+                <i class="pi pi-plus-circle" style="font-size: 1.5rem"></i>
                     Add a Campaign
                 </button>
                 
@@ -126,6 +135,262 @@
                     <span class="ml-2 flex w-3 h-3 me-3 bg-blue-200 rounded-full"></span>
                 </div>
             }
+        </div>
+        <!-- TABLA -->
+         
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
+    <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white p-2 w-full ">
+        <div>
+            <form class="">   
+                    <div class="relative ">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search" class="block  p-2 ps-10 text-sm text-gray-900 w-full  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." required />
+
+                     
+                    </div>
+                </form>
+        </div>
+        <label for="table-search" class="sr-only">Search</label>
+        <div class="relative">
+            @for (item of selectTable; track $index) {
+
+                <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="ml-2 inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
+                     <span class="text-gray-500">
+                         {{item.label}}
+                     </span>
+                     <span class="text-gray-800 ml-2">
+                        {{item.label2}}
+                     </span>
+                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                     </svg>
+                 </button>
+            }
+            
+        </div>
+    </div>
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 w-full ">
+            <tr>
+               @for (item of headerTable; track $index) {
+
+                   <th scope="col" class="px-6 py-3">
+                        <div class="flex items-center gap-1">
+
+                            <span class="text-nowrap">
+                                {{item}}
+                            </span>
+                            <i class="pi pi-sort-alt"></i>
+                        </div>
+                       
+                   </th>
+               }
+               <th scope="col" class="px-6 py-3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of trTable; track $index) {
+            <tr class="bg-white border-b  border-gray-200 hover:bg-gray-50 ">
+                <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
+                    <img class="w-10 h-10 rounded-full" src="https://img.utdstc.com/icon/d49/c48/d49c4851fcbdecccece71a27cddf0a6bddb23173461e763ec32cd08eeb778c69:200" alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Blue Chips Cicago
+                             <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm ">Active</span>
+                            </div>
+                        <div class="font-normal text-gray-500">Today August 10-10-10 10:30</div>
+                    </div>  
+                </th>
+                <td class="px-6 py-4 text-gray-800 font-bold">
+                    $8000
+                </td>
+                <td class="px-6 py-4 text-gray-800 font-bold">
+                    $7000
+                </td>
+                <td class="px-6 py-4 text-gray-800 font-bold">
+                    1,200,000 Read
+                </td>
+                <td class="px-6 py-4 text-gray-800 font-bold">
+                    Jun 12,24-> Aug 14,24
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex -space-x-4 rtl:space-x-reverse">
+                        @for (item of imgTabla; track $index) {
+                        <img class="w-10 h-10 border-2 border-white rounded-full " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7oMra0QkSp_Z-gShMOcCIiDF5gc_0VKDKDg&s" alt="">
+                        }
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <i class="pi pi-angle-right"></i>
+                </td>
+            </tr>
+            }
+         
+          
+        </tbody>
+    </table>
+</div>
+
+    </div>
+    <!-- OTRA PAGINA DESDE AQUI -->
+     <div class="w-full px-8  pt-4 flex gap-2">
+        <div  class="max-w-screen-md">
+            <div class="flex justify-between">
+
+                <div class="flex flex-col">
+        
+                    <h4 class="text-2xl font-bold ">Payments</h4>
+                    <span class="text-gray-400">Your account payments</span>
+                </div>
+                
+                    
+            </div>
+            
+            <!-- TABLA -->
+            
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
+        <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white p-2 w-full ">
+            <div>
+                <p class="text-lg text-gray-800 font-bold">Transaccion History</p>
+                
+            </div>
+            
+            <div class="relative flex gap-2">
+                    <form class="">   
+                        <div class="relative ">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search" class="block  p-2 ps-10 text-sm text-gray-900 w-full  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." required />
+
+                        
+                        </div>
+                    </form>
+                    <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" class="ml-2 inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 " type="button">
+                        <span class="text-gray-500">
+                            Social Media:
+                        </span>
+                        <span class="text-gray-800 ml-2">
+                            All
+                        </span>
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                
+                
+            </div>
+        </div>
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 w-full ">
+                <tr>
+
+                    <th scope="col" class="px-6 py-3 w-[80%]">
+                            <div class="flex items-center gap-1">
+
+                                <span class="text-nowrap">
+                                    Transaccion Name
+                                </span>
+                                <i class="pi pi-sort-alt"></i>
+                            </div>
+                        
+                    </th>
+                    <th scope="col" class="px-6 py-3 w-[20%] ">
+                            <div class="flex items-center gap-1">
+
+                                <span class="text-nowrap">
+                                    Amount
+                                </span>
+                                <i class="pi pi-sort-alt"></i>
+                            </div>
+                        
+                    </th>
+                
+                <th scope="col" class="px-6 py-3"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of trTable; track $index) {
+                <tr class="bg-white border-b  border-gray-200 hover:bg-gray-50 ">
+                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap ">
+                        
+                        <i class="pi pi-arrow-up-right" style="font-size: 2rem;color:green;"></i>
+                        <div class="ps-3">
+                            <div class="text-base font-semibold">Subscription Payment </div>
+                                
+                            <div class="font-normal text-gray-500">Today August 10-10-10 10:30</div>
+                        </div>  
+                    </th>
+                    <td class="px-6 py-4 text-gray-800 font-bold">
+                        $8000
+                    </td>
+                </tr>
+                }
+            
+            
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+
+        <div>
+        <div class="w-[300px] bg-white border border-gray-200 rounded-lg shadow-sm">
+        <div class="flex justify-end px-2 pt-4">
+            <div class="flex flex-col items-center ">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="https://static.vecteezy.com/system/resources/previews/047/644/950/non_2x/key-game-cartoon-isolated-icon-vector.jpg" alt="Bonnie image" />
+            <h5 class="mb-1 text-xl font-medium text-gray-900">Payment secure</h5>
+            <span class="text-sm text-gray-500 px-4 text-center">Your payment is 100% secure using encode 128 encryption</span>
+            <span class="text-sm text-gray-500 px-4 text-center mt-16">Payment Partnerts</span>
+            <div class="flex ">
+            <a href="#" class="inline-flex items-center px-4 text-sm font-medium text-center text-white  focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <img src="https://static-sg.winudf.com/wupload/xy/aprojectadmin/i3XvNgSH.png" alt="" width="100">
+            </a>
+            <a href="#" class="inline-flex items-center px-4  text-sm font-medium text-center text-white  focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <img src="https://static-sg.winudf.com/wupload/xy/aprojectadmin/i3XvNgSH.png" alt="" width="100">
+            </a>
+           
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="w-[300px] bg-white border border-gray-200 rounded-lg shadow-sm mt-2">
+        <div class="flex justify-end px-2 pt-4">
+                <div class="flex flex-col items-center mt-4">
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">Subscription </span>
+                        <span class="text-blue-700">Change Method</span>
+                    </div>
+                    <img class="w-16 h-16 mb-3 rounded-full shadow-lg" src="https://static.vecteezy.com/system/resources/previews/047/644/950/non_2x/key-game-cartoon-isolated-icon-vector.jpg" alt="Bonnie image" />
+                    <h5 class="mb-1 text-xl font-medium text-gray-900">Brand package</h5>
+                    <span class="text-lg text-gray-500 px-4 text-center">Recurrent payment</span>
+                    <span class="text-2xl text-gray-900 px-4 text-center">$590</span>
+                    <span class="text-sm text-gray-500 px-4 text-center">Include with tax</span>
+
+                    
+                    <div class="flex justify-between">
+                        <span class="text-gray-900 flex flex-col"> 
+                            <span class="text-gray-400">Prevoius Payment</span>
+                            <span class="">13-Aufut-2025</span>
+                        </span>
+                        <span class="text-gray-900 flex flex-col"> 
+                            <span class="text-gray-400">Prevoius Payment</span>
+                            <span class="">13-Aufut-2025</span>
+                        </span>
+                    </div>
+                    <div class="text-red-500 text-lg border-t border-gray-300 p-2 text-center">
+                        Cancel Plan
+                    </div>
+                
+                </div>
+            </div>
         </div>
     </div>
     </div>
